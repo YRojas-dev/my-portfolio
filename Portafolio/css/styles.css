@@ -105,7 +105,7 @@ nav a:hover {
 /* =========================================================================================================================== */
 .cover-section {
   position: relative;
-  background-image: url("../img/portada.jpg");
+  background-image: url("../img/cover.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -196,7 +196,7 @@ nav a:hover {
   font-weight: bold;
   margin: 0;
   margin-top: 1rem;
-  margin-left: 25rem;
+  margin-left: 27rem;
   color: var(--secondary-text-color);
 }
 
@@ -242,7 +242,7 @@ nav a:hover {
 .description {
   color: var(--secondary-text-color);
   font-weight: bold;
-  margin-left: 30rem;
+  margin-left: 32rem;
 }
 
 .description h3 {
@@ -403,7 +403,7 @@ nav a:hover {
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease, visibility 1s ease;
-  z-index: 10000;
+  z-index: 9999;
   user-select: none;
 }
 
@@ -420,6 +420,8 @@ nav a:hover {
   font-size: 1.2rem;
   transition: background-color 0.3s;
   height: 4rem;
+  position: relative;    /* Para que z-index funcione */
+  z-index: 0; 
 }
 
 .downloadCV-button:hover {
@@ -514,21 +516,25 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem; /* espacio entre flechas y carrusel */
+  padding: 0 2rem; /* espacio para que las flechas no toquen los bordes */
+  box-sizing: border-box;
 }
 
 .carousel-track {
   position: relative;
-  width: 700px;
+  width: 650px; /* ajusta según cuánto quieres que ocupen las cartas */
   height: 280px;
   perspective: 1000px;
-  margin-left: 47.5rem;
   overflow: visible;
+  /* QUITAR margin-left para que no se desplace a la derecha */
 }
 
 /* Tarjeta */
 .skill-card {
   position: absolute;
   top: 50%;
+  left: 50%; /* Para que la carta se posicione centrada horizontalmente con translate */
   width: 220px;
   height: 26rem;
   background: var(--secondary-background);
@@ -540,7 +546,7 @@ nav a:hover {
   cursor: default;
   user-select: none;
   transform-origin: center center;
-  transform: translateY(-50%) scale(0.8);
+  transform: translate(-50%, -50%) scale(0.8);
   opacity: 0.6;
   transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease,
     left 0.5s ease, z-index 0.5s ease;
@@ -623,35 +629,25 @@ nav a:hover {
 
 /* Flechas */
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
+  background: transparent; /* sin fondo */
   border: none;
-  color: var(--button-text-color);
+  color: var(--primary-text-color);
   font-size: 2.5rem;
   cursor: pointer;
+  padding: 0 1rem;
   user-select: none;
-  padding: 5rem 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, color 0.3s ease;
   z-index: 20;
-}
-
-.arrow.left {
-  left: 1rem;
-}
-
-.arrow.right {
-  right: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* elimina position y top para dejar que flex center las alinee */
+  transform: scale(1);
 }
 
 .arrow:hover {
-  transform: translateY(-50%) scale(1.5);
+  transform: scale(1.5);
   color: var(--button-hover-color);
 }
+
+
 
 /* =========================================================================================================================== */
 /* ======================================================= EXPERIENCIA ======================================================= */
