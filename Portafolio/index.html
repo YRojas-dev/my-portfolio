@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YRojas.Dev - Portafolio</title>
+        <link rel="preload" href="css/styles.css" as="style">
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/scripts.js" defer></script>
+    </head>
+    <body>
+        <!-- ================================= NAVBAR ================================= -->
+        <nav>
+            <a href="#">Contacto</a>
+            <a href="#project-section">Proyectos</a>
+            <a href="#skills-section">Habilidades</a>
+            <a href="#workExperience-section">Experiencia</a>
+            <a href="#aboutMe-section">Sobre Mí</a>
+        </nav>
+        <main>
+            <section class="cover-section">
+                <!-- ================================= PORTADA ================================= -->
+                <img class="portrait-image" src="img/retrato.png">
+                <div class="greeting">
+                    <h2>Hola<span class="green">,</span> soy</h2>
+                </div>
+                <h1 class="main-title">Yoselin Rojas Fuentes</h1>
+                <h2 class="animated-subtitle">Desarrolladora Web</h2>
+                <div class="description">
+                    <h3>Diseño y desarrollo experiencias
+                        digitales intuitivas y
+                        escalables.
+                    </h3>
+                </div>
+                <div class="moreInfo-wrapper">
+
+                    <!-- UBICACION -->
+                    <div class="location">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#000000"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                            <path
+                                d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                        </svg>
+                        <h3>Alajuela, Costa Rica</h3>
+                    </div>
+
+                    <!-- BOTONES -->
+                    <div class="social-media-container">
+                        <!-- LinkedIn -->
+                        <button class="icon-button"
+                            onclick="window.open('https://github.com/YRojas-dev', '_blank')">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2
+                              c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2
+                              s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 
+                              4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6
+                              c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                            </svg>
+                        </button>
+
+                        <!-- Github -->
+                        <button class="icon-button"
+                            onclick="window.open('https://www.linkedin.com/in/yoselin-rojas-fuentes-60a413268/', '_blank')">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                <path d="M8 11l0 5" />
+                                <path d="M8 8l0 .01" />
+                                <path d="M12 16l0 -5" />
+                                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ================================= CONTACTO ================================= -->
+                <div class="contact-container">
+                    <!-- Email -->
+                    <div class="contact-item">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                                <path d="M3 7l9 6l9 -6" />
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <h3>yrojas.dev@gmail.com</h3>
+                        </div>
+                        <button
+                            onclick="navigator.clipboard.writeText('yrojas.dev@gmail.com')">Copiar</button>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="contact-item">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                height="40" viewBox="0 0 24 24" fill="none"
+                                stroke="#000000" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <h3>(+506) 62168604</h3>
+                        </div>
+                        <button
+                            onclick="navigator.clipboard.writeText('+50662168604')">
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+                <a href="/docs/cv.pdf" download="YoselinRojasFuentesCV.pdf"
+                    class="downloadCV-button">
+                    <div class="downloadCV-content">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="10" height="10" viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#000000" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                            <path
+                                d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                            <path d="M12 17v-6" />
+                            <path d="M9.5 14.5l2.5 2.5l2.5 -2.5" />
+                        </svg>
+                        Descargar CV
+                    </div>
+                </a>
+
+            </section>
+
+            <!-- ================================= PROYECTOS ================================= -->
+            <section class="content-section" id="project-section">
+                <div class="section-title">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="section-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#57ccc7"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M3 19l18 0" />
+                        <path
+                            d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
+                    </svg>
+                    <h2>Proyectos</h2>
+                </div>
+
+                <h3>Desarrollo Web</h3>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-width="2.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M7 8l-4 4l4 4" />
+                    <path d="M17 8l4 4l-4 4" />
+                    <path d="M14 4l-4 16" />
+                </svg>
+                <p>
+                    Praesent sit amet placerat ligula. Etiam aliquam mi nec odio
+                    dapibus
+                    tristique. Maecenas at ante in felis facilisis egestas...
+                </p>
+
+                <h3>Aplicaciones Móviles</h3>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-width="2.25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 10l0 6" />
+                    <path d="M20 10l0 6" />
+                    <path
+                        d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" />
+                    <path d="M8 3l1 2" />
+                    <path d="M16 3l-1 2" />
+                    <path d="M9 18l0 3" />
+                    <path d="M15 18l0 3" />
+                </svg>
+                <p>
+                    Praesent sit amet placerat ligula. Etiam aliquam mi nec odio
+                    dapibus
+                    tristique. Maecenas at ante in felis facilisis egestas...
+                </p>
+            </section>
+
+            <!-- Carrusel de Habilidades -->
+            <section class="content-section" id="skills-section">
+                <div class="section-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="section-icon"
+                        viewBox="0 0 24 24" fill="none" stroke="#57ccc7"
+                        stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
+                        <path d="M14.5 5.5l4 4" />
+                        <path d="M12 8l-5 -5l-4 4l5 5" />
+                        <path d="M7 8l-1.5 1.5" />
+                        <path d="M16 12l5 5l-4 4l-5 -5" />
+                        <path d="M16 17l-1.5 1.5" />
+                    </svg>
+                    <h2>Habilidades</h2>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <button class="arrow left" id="prev-btn">‹</button>
+                    <div class="carousel-track">
+                        <!-- Tarjeta 1 -->
+                        <div class="skill-card">
+                            <h3>Lenguajes</h3>
+                            <div class="icons">
+                                <img src="js.png" alt="JavaScript">
+                                <img src="python.png" alt="Python">
+                                <img src="html.png" alt="HTML">
+                            </div>
+                        </div>
+                        <!-- Tarjeta 2 -->
+                        <div class="skill-card">
+                            <h3>Frameworks</h3>
+                            <div class="icons">
+                                <img src="react.png" alt="React">
+                                <img src="vue.png" alt="Vue">
+                                <img src="django.png" alt="Django">
+                            </div>
+                        </div>
+                        <!-- Tarjeta 3 -->
+                        <div class="skill-card">
+                            <h3>Herramientas</h3>
+                            <div class="icons">
+                                <img src="git.png" alt="Git">
+                                <img src="figma.png" alt="Figma">
+                                <img src="docker.png" alt="Docker">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="arrow right" id="next-btn">›</button>
+                </div>
+            </section>
+
+            <section class="content-section" id="workExperience-section">
+                <div class="section-title">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="section-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#57ccc7"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
+                        <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+                    </svg>
+                    <h2>Experiencia Laboral</h2>
+                </div>
+
+                <h3>Certificaciones</h3>
+            </section>
+
+            <section class="content-section" id="aboutMe-section">
+                <div class="section-title">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="section-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#57ccc7"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                    </svg>
+                    <h2>Sobre mí</h2>
+                </div>
+
+                <p>
+                    = Formación y experiencia profesional.
+                    = Especialidades o tecnologías que dominas.
+                    = Intereses o filosofía de trabajo.
+                </p>
+            </section>
+        </main>
+    </body>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <!-- GitHub Icon -->
+            <a href="https://github.com/YRojas-dev" target="_blank"
+                class="footer-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 24 24" fill="none"
+                    stroke="#57ccc7" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                </svg>
+            </a>
+
+            <!-- LinkedIn Icon -->
+            <a
+                href="https://www.linkedin.com/in/yoselin-rojas-fuentes-60a413268/"
+                target="_blank" class="footer-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 24 24" fill="none"
+                    stroke="#57ccc7" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                        d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                    <path d="M8 11l0 5" />
+                    <path d="M8 8l0 .01" />
+                    <path d="M12 16l0 -5" />
+                    <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+                </svg>
+            </a>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>yrojas.dev@gmail.com</h3>
+                <h3>(+506) 62168604</h3>
+            </div>
+        </div>
+
+        <p class="copyright">© 2025 Yoselin Rojas Fuentes. Todos los derechos
+            reservados.</p>
+    </footer>
+
+</html>
