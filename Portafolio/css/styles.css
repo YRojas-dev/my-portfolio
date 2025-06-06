@@ -317,6 +317,7 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+
 /* ================================= CONTACTO ================================= */
 .contact-container {
   padding: 2rem;
@@ -386,6 +387,26 @@ nav a:hover {
   background-color: var(--button-hover-color);
   transform: scale(1.05);
 }
+
+#toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--alternate-background-color);
+  color: var(--button-text-color);
+  padding: 1.5rem 3rem;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+  z-index: 10000;
+  user-select: none;
+}
+
 
 /* ================================= CV DOWNLOAD BUTTON ================================= */
 .downloadCV-button {

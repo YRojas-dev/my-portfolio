@@ -108,8 +108,8 @@
                         <div class="text">
                             <h3>yrojas.dev@gmail.com</h3>
                         </div>
-                        <button
-                            onclick="navigator.clipboard.writeText('yrojas.dev@gmail.com')">Copiar</button>
+                        <button id="copy-btn-email">Copiar</button>
+                        <div id="toast">¡Copiado en el portapapeles!</div>
                     </div>
 
                     <!-- Teléfono -->
@@ -126,10 +126,8 @@
                         <div class="text">
                             <h3>(+506) 62168604</h3>
                         </div>
-                        <button
-                            onclick="navigator.clipboard.writeText('+50662168604')">
-                            Copiar
-                        </button>
+                        <button id="copy-btn-phone">Copiar</button>
+                        <div id="toast">¡Copiado en el portapapeles!</div>
                     </div>
                 </div>
                 <a href="/docs/cv.pdf" download="YoselinRojasFuentesCV.pdf"
@@ -381,7 +379,8 @@
                                 promoviendo el trabajo en equipo y la entrega de
                                 soluciones orientadas a resultados. Esto llevó a
                                 una reducción del 10 % en el tiempo de
-                                desarrollo al automatizar tareas de mantenimiento.</li>
+                                desarrollo al automatizar tareas de
+                                mantenimiento.</li>
                         </ul>
                     </div>
 
