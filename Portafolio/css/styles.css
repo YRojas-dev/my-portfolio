@@ -649,7 +649,7 @@ nav a:hover {
 /* =========================================================================================================================== */
 /* ======================================================= EXPERIENCIA ======================================================= */
 /* =========================================================================================================================== */
-.work-experience-container {
+.experience-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -658,7 +658,7 @@ nav a:hover {
 }
 
 /* Tarjeta */
-.work-card {
+.experience-card {
   width: 90%;
   background-color: var(--secondary-background);
   border-radius: 1rem;
@@ -667,7 +667,7 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.work-header {
+.experience-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -675,7 +675,7 @@ nav a:hover {
 }
 
 /* Título */
-.work-title {
+.experience-title {
   font-size: 1.7rem;
   font-weight: bold;
   color: var(--primary-text-color);
@@ -683,14 +683,14 @@ nav a:hover {
 }
 
 /* Fecha */
-.work-date {
+.experience-date {
   font-size: 1.5rem;
   color: var(--primary-text-color);
   font-weight: bold;
 }
 
 /* Borde */
-.work-divider {
+.experience-divider {
   margin: 0.75rem 0 1rem 0;
   height: 2px;
   width: 100%;
@@ -699,7 +699,7 @@ nav a:hover {
 }
 
 /* Descripción */
-.work-description {
+.experience-description {
   list-style-type: disc;
   padding-left: 2rem;
   text-align: left;
@@ -709,18 +709,24 @@ nav a:hover {
   line-height: 1.5;
 }
 
-.work-description li {
+.experience-description li {
   margin-bottom: 0.5rem;
   text-align: justify;
 }
 
 /* Certificaciones  */
 .cert-container {
+  margin-top: 3rem;
+  margin-left: 4.5rem;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 3rem;
+  border: 2px solid rgba(var(--primary-text-color-rgb, 87, 204, 199), 0.3);
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 /* Titulo */
@@ -729,19 +735,23 @@ nav a:hover {
   font-size: 2rem;
   font-weight: bold;
   color: var(--primary-text-color);
-  display: inline-block;
+  display: block; 
+  width: 100%;
   margin-top: 3rem;
   margin-bottom: 1rem;
+  text-align: center; 
 }
 
 .cert-title::after {
   content: "";
   display: block;
   height: 1px;
-  width: 100%;
+  width: 95%; 
   background-color: var(--primary-text-color);
   margin-top: 0.5rem;
-  border-radius: 2px;
+  border-radius: 1px;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 /* Item */
@@ -807,7 +817,7 @@ nav a:hover {
   background-color: rgba(
     var(--primary-text-color-rgb, 87, 204, 199),
     0.3
-  ); /* fallback si no defines la variable en rgb */
+  ); 
   margin: 1rem 0;
 }
 
@@ -820,7 +830,7 @@ nav a:hover {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: var(--primary-text-color);
-  max-width: 900px;
+  width: 90%; 
   margin: 2rem auto;
   font-size: 1.4rem;
   line-height: 1.7;
