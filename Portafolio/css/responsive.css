@@ -1,0 +1,191 @@
+/* =========================================================================================================================== */
+/* ================================================ CELULARES PEQUEÑOS ======================================================= */
+/* =========================================================================================================================== */
+@media (max-width: 480px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 4.5rem;
+  }
+
+  nav,
+  footer {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-position: center top;
+    background-size: 45px 45px;
+    background-repeat: repeat;
+    animation: moveBackgroundSmall 120s linear infinite;
+  }
+
+  .content-section {
+    width: 90vw;
+  }
+
+  /* ================================= PORTADA ================================= */
+  .portrait-image {
+    margin-top: 29rem;
+    width: 420px;
+    margin-left: -5.5rem;
+    z-index: 2;
+  }
+
+  /* Saludo */
+  .greeting h2 {
+    margin-top: 3rem;
+  }
+
+  /* Título */
+  .main-title {
+    font-size: 3rem;
+    margin-right: 25rem;
+    white-space: nowrap;
+  }
+
+  /* Subtitulo */
+  .animated-subtitle {
+    font-size: 2.5rem;
+    margin-right: 30rem;
+  }
+
+  /* Descripción */
+  .description {
+    justify-items: center;
+    margin-right: 29rem;
+    white-space: nowrap;
+  }
+
+  /* Redes */
+  .moreInfo-wrapper {
+    gap: 5rem !important;
+    margin-right: 32rem;
+    margin-top: -0.2rem;
+  }
+
+  /* Contacto */
+  .contact-container {
+    width: auto;
+    max-width: 100%;
+    padding-right: 5rem;
+  }
+
+  .contact-item {
+    width: 110%;
+    max-width: 100rem;
+    margin-left: -15rem;
+  }
+
+  .text h3 {
+    white-space: nowrap;
+    font-size: 1rem !important;
+    margin-left: -2.5rem;
+  }
+
+  .text-phone {
+    margin-left: 1rem;
+  }
+
+  /* CV */
+  .downloadCV-button {
+    margin-right: 18rem;
+    width: 15rem;
+  }
+
+  /* ================================= PROYECTOS ================================= */
+  /* ================================= HABILIDADES ================================= */
+  .carousel-wrapper {
+    padding: 0 0.5rem;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .skill-card {
+    width: 200px;
+    height: 25rem;
+    padding: 1rem;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .skill-card.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Flechas */
+  .arrow:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow-left {
+    left: 0;
+    margin-left: -2.9rem;
+  }
+
+  .arrow-right {
+    right: 0;
+    margin-right: -2.9rem;
+  }
+
+  /* ================================= NAVBAR ================================= */
+  .nav-content {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    margin-right: auto;
+    margin-left: 1rem;
+  }
+
+  /* ================================= EXPERIENCIA ================================= */
+  .experience-title {
+    margin: 3rem auto;
+  }
+
+  .cert-container {
+    margin: 3rem auto;
+  }
+}
+
+/* Animación ajustada para celulares pequeños */
+@keyframes moveBackgroundSmall {
+  0% {
+    background-position: top right;
+  }
+  100% {
+    background-position: bottom left;
+  }
+}

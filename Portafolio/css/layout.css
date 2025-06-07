@@ -1,0 +1,295 @@
+/* =========================================================================================================================== */
+/* =============================================== CONFIGURACION GENERAL ===================================================== */
+/* =========================================================================================================================== */
+
+/* ================================= PALETA DE COLORES ================================= */
+:root {
+    /* Colores principales */
+    --background-color: #121a1a;
+    --primary-text-color: #57ccc7;
+    --secondary-text-color: #000;
+    --hover-text-color: #000;
+  
+    /* Acentos y bordes */
+    --accent-color: #307d7a;
+    --border-color: #307d7a;
+  
+    /* Botones */
+    --button-background-color: #000;
+    --button-text-color: #57ccc7;
+    --button-hover-color: #307d7a;
+  
+    /* Secciones alternas */
+    --secondary-background: #116767b0;
+    --alternate-background-color: #132929;
+  
+    /* Estados */
+    --error-color: #d9534f;
+    --success-color: #4caf50;
+  }
+  
+  .cover-section > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;           /* 1rem = 10px // Mejor adaptabilidad para cualquier tipo de navegador */
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 1.6rem;          /* 1rem = 10px // Mejor adaptabilidad para cualquier tipo de navegador */
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 6rem;
+    font-family: sans-serif;
+    background-color: var(--alternate-background-color);
+    color: var(--border-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80' fill='none' stroke='%23307d7a4d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg transform='translate(20, 10) scale(2)'%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M14 4l-4 16'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 90px 90px;
+    animation: moveBackground 120s linear infinite;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Animación de fondo*/
+  @keyframes moveBackground {
+    0% {
+      background-position: top right;
+    }
+    100% {
+      background-position: bottom left;
+    }
+  }
+  
+
+
+  /* =========================================================================================================================== */
+  /* =================================================== NAVBAR BASE =========================================================== */
+  /* =========================================================================================================================== */
+  nav {
+    background-color: var(--background-color);
+    width: 100%;
+    height: 6rem;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--border-color);
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Contenedor de enlaces */
+  .nav-content {
+    display: flex;
+    gap: 8rem;
+  }
+  
+  /* Estilo para enlaces */
+  nav a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-background-color);
+  }
+  
+  /* Botón hamburguesa */
+  .hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--primary-text-color);
+    cursor: pointer;
+  }
+
+
+  
+  /* =========================================================================================================================== */
+  /* =================================================== NAVBAR NORMAL ========================================================= */
+  /* =========================================================================================================================== */
+  .navbar {
+    background-color: var(--background-color);
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    align-items: center;
+    padding: 0 3rem;
+    box-sizing: border-box;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-background-color);
+  }
+  
+  /* Botón hamburguesa */
+  .hamburger {
+    display: none;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 2.5rem;
+    z-index: 1100;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-text-color);
+  }
+  
+
+
+  /* =========================================================================================================================== */
+  /* ====================================================== SIDEBAR ============================================================ */
+  /* =========================================================================================================================== */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -70%;
+    width: 70%;
+    height: 100vh;
+    background-color: #121a1afb;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: left 0.3s ease;
+    z-index: 1100;
+    border-bottom: 2px solid var(--border-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Mostrar el sidebar */
+  .sidebar.show {
+    left: 0;
+  }
+  
+  /* Botón cerrar */
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    align-self: flex-end;
+    cursor: pointer;
+    color: var(--primary-text-color);
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    font-family: inherit;
+  }
+  
+  .sidebar a:hover {
+    background-color: var(--button-text-color);
+    color: var(--button-background-color);
+  }
+  
+  .sidebar-divider {
+    width: 100%;
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 0rem 0 1rem;
+  }
+  
+  .container-menu-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .menu-sidebar {
+    margin-right: auto;
+    color: var(--primary-text-color);
+  }
+
+/* =========================================================================================================================== */
+/* ========================================================= FOOTER ========================================================== */
+/* =========================================================================================================================== */
+.main-footer {
+    background-color: var(--background-color);
+    border-top: 2px solid var(--button-hover-color);
+    padding: 1rem 1rem 1rem;
+    color: var(--primary-text-color);
+    font-family: "Calibri", sans-serif;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Iconos */
+  .footer-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Contacto */
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+  }
+  
+  .footer-contact h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  
+  /* Copyright */
+  .copyright {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #999;
+  }

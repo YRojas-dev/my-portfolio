@@ -1,105 +1,4 @@
 /* =========================================================================================================================== */
-/* =============================================== CONFIGURACION GENERAL ===================================================== */
-/* =========================================================================================================================== */
-
-/* ================================= PALETA DE COLORES ================================= */
-:root {
-  /* Colores principales */
-  --background-color: #121a1a;
-  --primary-text-color: #57ccc7;
-  --secondary-text-color: #000;
-  --hover-text-color: #000;
-
-  /* Acentos y bordes */
-  --accent-color: #307d7a;
-  --border-color: #307d7a;
-
-  /* Botones */
-  --button-background-color: #000;
-  --button-text-color: #57ccc7;
-  --button-hover-color: #307d7a;
-
-  /* Secciones alternas */
-  --secondary-background: #116767b0;
-  --alternate-background-color: #132929;
-
-  /* Estados */
-  --error-color: #d9534f;
-  --success-color: #4caf50;
-}
-
-.cover-section > * {
-  position: relative;
-  z-index: 1;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%; /* 1rem = 10px // Mejor adaptabilidad para cualquier tipo de navegador */
-  scroll-behavior: smooth;
-}
-
-body {
-  font-size: 1.6rem;
-  min-height: 100vh;
-  margin: 0;
-  padding-top: 6rem;
-  font-family: sans-serif;
-  background-color: var(--alternate-background-color);
-  color: var(--border-color);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80' fill='none' stroke='%23307d7a4d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg transform='translate(20, 10) scale(2)'%3E%3Cpath d='M7 8l-4 4l4 4'/%3E%3Cpath d='M17 8l4 4l-4 4'/%3E%3Cpath d='M14 4l-4 16'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 90px 90px;
-  animation: moveBackground 120s linear infinite;
-}
-
-/* Animación de fondo*/
-@keyframes moveBackground {
-  0% {
-    background-position: top right;
-  }
-  100% {
-    background-position: bottom left;
-  }
-}
-
-nav {
-  background-color: var(--background-color);
-  width: 100%;
-  height: 6rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  gap: 8rem;
-  align-items: center;
-  padding: 0 3rem;
-  box-sizing: border-box;
-  border-bottom: 2px solid var(--border-color);
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--primary-text-color);
-  padding: 1.5rem 1rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: bold;
-}
-
-nav a:hover {
-  background-color: var(--button-text-color);
-  color: var(--button-background-color);
-}
-
-/* =========================================================================================================================== */
 /* ========================================================= PORTADA ========================================================= */
 /* =========================================================================================================================== */
 .cover-section {
@@ -316,7 +215,6 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-
 /* ================================= CONTACTO ================================= */
 .contact-container {
   padding: 2rem;
@@ -406,7 +304,6 @@ nav a:hover {
   user-select: none;
 }
 
-
 /* ================================= CV DOWNLOAD BUTTON ================================= */
 .downloadCV-button {
   display: inline-block;
@@ -419,8 +316,8 @@ nav a:hover {
   font-size: 1.2rem;
   transition: background-color 0.3s;
   height: 4rem;
-  position: relative;  
-  z-index: 0; 
+  position: relative;
+  z-index: 0;
 }
 
 .downloadCV-button:hover {
@@ -515,8 +412,8 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem; 
-  padding: 0 2rem; 
+  gap: 1.5rem;
+  padding: 0 2rem;
   box-sizing: border-box;
 }
 
@@ -627,7 +524,7 @@ nav a:hover {
 
 /* Flechas */
 .arrow {
-  background: transparent; 
+  background: transparent;
   border: none;
   color: var(--primary-text-color);
   font-size: 2.5rem;
@@ -644,12 +541,10 @@ nav a:hover {
   color: var(--button-hover-color);
 }
 
-
-
 /* =========================================================================================================================== */
 /* ======================================================= EXPERIENCIA ======================================================= */
 /* =========================================================================================================================== */
-.work-experience-container {
+.experience-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -658,7 +553,7 @@ nav a:hover {
 }
 
 /* Tarjeta */
-.work-card {
+.experience-card {
   width: 90%;
   background-color: var(--secondary-background);
   border-radius: 1rem;
@@ -667,7 +562,7 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.work-header {
+.experience-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -675,7 +570,7 @@ nav a:hover {
 }
 
 /* Título */
-.work-title {
+.experience-title {
   font-size: 1.7rem;
   font-weight: bold;
   color: var(--primary-text-color);
@@ -683,14 +578,14 @@ nav a:hover {
 }
 
 /* Fecha */
-.work-date {
+.experience-date {
   font-size: 1.5rem;
   color: var(--primary-text-color);
   font-weight: bold;
 }
 
 /* Borde */
-.work-divider {
+.experience-divider {
   margin: 0.75rem 0 1rem 0;
   height: 2px;
   width: 100%;
@@ -699,7 +594,7 @@ nav a:hover {
 }
 
 /* Descripción */
-.work-description {
+.experience-description {
   list-style-type: disc;
   padding-left: 2rem;
   text-align: left;
@@ -709,18 +604,24 @@ nav a:hover {
   line-height: 1.5;
 }
 
-.work-description li {
+.experience-description li {
   margin-bottom: 0.5rem;
   text-align: justify;
 }
 
 /* Certificaciones  */
 .cert-container {
+  margin-top: 3rem;
+  margin-left: 4.5rem;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 3rem;
+  border: 2px solid rgba(var(--primary-text-color-rgb, 87, 204, 199), 0.3);
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 /* Titulo */
@@ -729,19 +630,23 @@ nav a:hover {
   font-size: 2rem;
   font-weight: bold;
   color: var(--primary-text-color);
-  display: inline-block;
+  display: block;
+  width: 100%;
   margin-top: 3rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .cert-title::after {
   content: "";
   display: block;
   height: 1px;
-  width: 100%;
+  width: 95%;
   background-color: var(--primary-text-color);
   margin-top: 0.5rem;
-  border-radius: 2px;
+  border-radius: 1px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Item */
@@ -804,10 +709,7 @@ nav a:hover {
 .cert-divider {
   width: 100%;
   height: 1px;
-  background-color: rgba(
-    var(--primary-text-color-rgb, 87, 204, 199),
-    0.3
-  ); /* fallback si no defines la variable en rgb */
+  background-color: rgba(var(--primary-text-color-rgb, 87, 204, 199), 0.3);
   margin: 1rem 0;
 }
 
@@ -820,7 +722,7 @@ nav a:hover {
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: var(--primary-text-color);
-  max-width: 900px;
+  width: 90%;
   margin: 2rem auto;
   font-size: 1.4rem;
   line-height: 1.7;
@@ -831,55 +733,4 @@ nav a:hover {
   margin-bottom: 1.8rem;
   font-size: 1.6rem !important;
   font-weight: 700 !important;
-}
-
-/* =========================================================================================================================== */
-/* ========================================================= FOOTER ========================================================== */
-/* =========================================================================================================================== */
-.main-footer {
-  background-color: var(--background-color);
-  border-top: 2px solid var(--button-hover-color);
-  padding: 1rem 1rem 1rem;
-  color: var(--primary-text-color);
-  font-family: "Calibri", sans-serif;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-/* Iconos */
-.footer-icon {
-  transition: transform 0.3s ease;
-}
-
-.footer-icon:hover {
-  transform: scale(1.2);
-}
-
-/* Contacto */
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  text-align: center;
-}
-
-.footer-contact h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: normal;
-}
-
-/* Copyright */
-.copyright {
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  color: #999;
 }
