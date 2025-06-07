@@ -6,10 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyBtnEmail = document.getElementById('copy-btn-email');
   const copyBtnPhone = document.getElementById('copy-btn-phone');
   const toast = document.getElementById('toast');
+  const menuBtn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const sidebar = document.getElementById('sidebar');
   let current = 0;
 
   function updateCarousel() {
-    const total = cards.length;
     const radius = 260;
 
     cards.forEach((card, index) => {
@@ -59,28 +61,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
   }
 
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
+  nextBtn?.addEventListener('click', nextSlide);
+  prevBtn?.addEventListener('click', prevSlide);
 
-  copyBtnEmail.addEventListener('click', () => {
+  copyBtnEmail?.addEventListener('click', () => {
     navigator.clipboard.writeText('yrojas.dev@gmail.com')
-      .then(() => {
-        showToast();
-      })
-      .catch(err => {
-        console.error('Error al copiar: ', err);
-      });
+      .then(showToast)
+      .catch(err => console.error('Error al copiar: ', err));
   });
-  
-  copyBtnPhone.addEventListener('click', () => {
+
+  copyBtnPhone?.addEventListener('click', () => {
     navigator.clipboard.writeText('+50662168604')
-      .then(() => {
-        showToast();
-      })
-      .catch(err => {
-        console.error('Error al copiar: ', err);
-      });
+      .then(showToast)
+      .catch(err => console.error('Error al copiar: ', err));
   });
-  
+
+  // Menú lateral
+  menuBtn?.addEventListener('click', () => {
+    sidebar?.classList.add('show');
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    sidebar?.classList.remove('show');
+  });
+
+  document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar?.classList.remove('show');
+    });
+  });
+
   updateCarousel();
 });
