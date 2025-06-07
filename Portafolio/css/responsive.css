@@ -1,7 +1,17 @@
+/* Animación */
+@keyframes moveBackgroundSmall {
+  0% {
+    background-position: top right;
+  }
+  100% {
+    background-position: bottom left;
+  }
+}
+
 /* =========================================================================================================================== */
 /* ================================================ CELULARES PEQUEÑOS ======================================================= */
 /* =========================================================================================================================== */
-@media (max-width: 480px) {
+@media (max-width: 599px) {
   nav {
     position: fixed;
     top: 0;
@@ -180,12 +190,846 @@
   }
 }
 
-/* Animación ajustada para celulares pequeños */
-@keyframes moveBackgroundSmall {
-  0% {
-    background-position: top right;
+/* =========================================================================================================================== */
+/* =========================================== CELULARES MEDIANOS Y GRANDES ================================================== */
+/* =========================================================================================================================== */
+@media (min-width: 599px) and (max-width: 767px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 4.5rem;
   }
-  100% {
-    background-position: bottom left;
+
+  nav,
+  footer {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-position: center top;
+    background-size: 45px 45px;
+    background-repeat: repeat;
+    animation: moveBackgroundSmall 120s linear infinite;
+  }
+
+  .content-section {
+    width: 90vw;
+  }
+
+  /* ================================= PORTADA ================================= */
+  .portrait-image {
+    margin-top: 22rem;
+    width: 520px;
+    margin-left: -10rem;
+    z-index: 2;
+  }
+
+  /* Saludo */
+  .greeting h2 {
+    margin-top: 3rem;
+    margin-left: -15rem;
+  }
+
+  /* Título */
+  .main-title {
+    font-size: 3rem;
+    margin-right: 25rem;
+    white-space: nowrap;
+  }
+
+  /* Subtitulo */
+  .animated-subtitle {
+    font-size: 2.5rem;
+    margin-right: 25rem;
+  }
+
+  /* Descripción */
+  .description {
+    margin-right: 29rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Redes */
+  .moreInfo-wrapper {
+    gap: 6rem !important;
+    margin-right: 20rem;
+  }
+
+  /* Contacto */
+  .contact-container {
+    width: auto;
+    max-width: 100%;
+    padding-right: 5rem;
+  }
+
+  .contact-item {
+    width: 120%;
+    max-width: 100rem;
+    margin-left: -15rem;
+  }
+
+  .text h3 {
+    white-space: nowrap;
+    font-size: 1.5rem !important;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .text-phone {
+    margin-left: 1rem;
+  }
+
+  /* CV */
+  .downloadCV-button {
+    margin-right: 14rem;
+    width: 18rem;
+  }
+
+  /* ================================= PROYECTOS ================================= */
+  /* ================================= HABILIDADES ================================= */
+  .carousel-wrapper {
+    padding: 0 0.5rem;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .skill-card {
+    width: 200px;
+    height: 25rem;
+    padding: 1rem;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .skill-card.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Flechas */
+  .arrow:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow-left {
+    left: 0;
+    margin-left: -2.9rem;
+  }
+
+  .arrow-right {
+    right: 0;
+    margin-right: -2.9rem;
+  }
+
+  /* ================================= NAVBAR ================================= */
+  .nav-content {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    margin-right: auto;
+    margin-left: 1rem;
+  }
+
+  /* ================================= EXPERIENCIA ================================= */
+  .experience-title {
+    margin: 3rem auto;
+  }
+
+  .cert-container {
+    margin: 3rem auto;
+  }
+}
+
+/* =========================================================================================================================== */
+/* ================================================= TABLETS VERTICALES ====================================================== */
+/* =========================================================================================================================== */
+@media (min-width: 767px) and (max-width: 991px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 4.5rem;
+  }
+
+  nav,
+  footer {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-position: center top;
+    background-size: 45px 45px;
+    background-repeat: repeat;
+    animation: moveBackgroundSmall 120s linear infinite;
+  }
+
+  .nav-content {
+    gap: 5rem;
+  }
+
+  .content-section {
+    width: 90vw;
+  }
+
+  /* ================================= PORTADA ================================= */
+  .portrait-image {
+    margin-top: 7rem;
+    width: 760px;
+    margin-left: -10rem;
+    z-index: 1;
+  }
+
+  /* Saludo */
+  .greeting h2 {
+    margin-top: 3rem;
+    margin-left: -3rem;
+  }
+
+  /* Título */
+  .main-title {
+    font-size: 3rem;
+    margin-right: 12rem;
+    white-space: nowrap;
+  }
+
+  /* Subtitulo */
+  .animated-subtitle {
+    font-size: 2.5rem;
+    margin-right: 8rem;
+  }
+
+  /* Descripción */
+  .description {
+    margin-right: 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Redes */
+  .moreInfo-wrapper {
+    gap: 8rem !important;
+    margin-right: 10rem;
+  }
+
+  /* Contacto */
+  .contact-container {
+    width: auto;
+    max-width: 100%;
+    padding-right: 5rem;
+  }
+
+  .contact-item {
+    width: 120%;
+    max-width: 100rem;
+    margin-left: -10rem;
+  }
+
+  .text h3 {
+    white-space: nowrap;
+    font-size: 1.5rem !important;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .text-phone {
+    margin-left: 1rem;
+  }
+
+  /* CV */
+  .downloadCV-button {
+    margin-right: 3rem;
+    width: 18rem;
+  }
+
+  /* ================================= PROYECTOS ================================= */
+  /* ================================= HABILIDADES ================================= */
+  .carousel-wrapper {
+    padding: 0 0.5rem;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .skill-card {
+    width: 200px;
+    height: 25rem;
+    padding: 1rem;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .skill-card.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Flechas */
+  .arrow:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow-left {
+    left: 0;
+    margin-left: -2.9rem;
+  }
+
+  .arrow-right {
+    right: 0;
+    margin-right: -2.9rem;
+  }
+
+  /* ================================= EXPERIENCIA ================================= */
+  .cert-container {
+    margin: 3rem auto;
+  }
+}
+
+/* =========================================================================================================================== */
+/* ========================================= TABLETS HORIZONTALES Y LAPTOPS PEQUEÑOS  ======================================== */
+/* =========================================================================================================================== */
+@media (min-width: 991px) and (max-width: 1200px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 4.5rem;
+  }
+
+  nav,
+  footer {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-position: center top;
+    background-size: 45px 45px;
+    background-repeat: repeat;
+    animation: moveBackgroundSmall 120s linear infinite;
+  }
+
+  .nav-content {
+    gap: 8rem;
+  }
+
+  .content-section {
+    width: 80vw;
+  }
+
+  /* ================================= PORTADA ================================= */
+  .portrait-image {
+    margin-top: 8rem;
+    width: 760px;
+    margin-left: -10rem;
+    z-index: 1;
+  }
+
+  /* Saludo */
+  .greeting h2 {
+    margin-top: 3rem;
+    margin-left: -3rem;
+  }
+
+  /* Título */
+  .main-title {
+    font-size: 3rem;
+    margin-right: 15rem;
+    white-space: nowrap;
+  }
+
+  /* Subtitulo */
+  .animated-subtitle {
+    font-size: 2.5rem;
+    margin-right: 8rem;
+  }
+
+  /* Descripción */
+  .description {
+    margin-right: 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Redes */
+  .moreInfo-wrapper {
+    gap: 13rem !important;
+    margin-right: 10rem;
+  }
+
+  /* Contacto */
+  .contact-container {
+    width: auto;
+    max-width: 100%;
+    padding-right: 5rem;
+  }
+
+  .contact-item {
+    width: 140%;
+    max-width: 100rem;
+    margin-left: -15rem;
+  }
+
+  .text h3 {
+    white-space: nowrap;
+    font-size: 1.5rem !important;
+    padding-left: 3rem !important;
+    margin-right: -1rem;
+  }
+
+  .text-phone {
+    margin-left: 1rem;
+  }
+
+  /* CV */
+  .downloadCV-button {
+    margin-right: 8rem;
+    width: 18rem;
+  }
+
+  /* ================================= PROYECTOS ================================= */
+  /* ================================= HABILIDADES ================================= */
+  .carousel-wrapper {
+    padding: 0 0.5rem;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .skill-card {
+    width: 200px;
+    height: 25rem;
+    padding: 1rem;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .skill-card.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Flechas */
+  .arrow:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow-left {
+    margin-left: 1rem !important;
+  }
+
+  .arrow-right {
+    margin-right: 1rem !important;
+  }
+
+  /* ================================= EXPERIENCIA ================================= */
+  .cert-container {
+    margin: 3rem auto;
+  }
+}
+
+/* =========================================================================================================================== */
+/* ==================================================== LAPTOPS Y DESKTOPS  ================================================== */
+/* =========================================================================================================================== */
+@media (min-width: 1200px) and (max-width: 1492px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 4.5rem;
+  }
+
+  nav,
+  footer {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-position: center top;
+    background-size: 45px 45px;
+    background-repeat: repeat;
+    animation: moveBackgroundSmall 120s linear infinite;
+  }
+
+  .nav-content {
+    gap: 8rem;
+  }
+
+  .content-section {
+    width: 80vw;
+  }
+
+  /* ================================= PORTADA ================================= */
+  .portrait-image {
+    margin-top: 5rem;
+    width: 805px;
+    margin-left: -7rem;
+    z-index: 1;
+  }
+
+  /* Saludo */
+  .greeting h2 {
+    margin-top: 4rem;
+    margin-left: -3rem;
+  }
+
+  /* Título */
+  .main-title {
+    font-size: 3rem;
+    margin-right: 15rem;
+    white-space: nowrap;
+  }
+
+  /* Subtitulo */
+  .animated-subtitle {
+    font-size: 2.5rem;
+    margin-right: 8rem;
+  }
+
+  /* Descripción */
+  .description {
+    margin-right: 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Redes */
+  .moreInfo-wrapper {
+    gap: 8rem !important;
+    margin-right: 5rem;
+  }
+
+  /* ================================= PROYECTOS ================================= */
+  /* ================================= HABILIDADES ================================= */
+  .carousel-wrapper {
+    padding: 0 0.5rem;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .skill-card {
+    width: 200px;
+    height: 25rem;
+    padding: 1rem;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .skill-card.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Flechas */
+  .arrow:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow-left {
+    margin-left: 5rem !important;
+  }
+
+  .arrow-right {
+    margin-right: 5rem !important;
+  }
+
+  /* ================================= EXPERIENCIA ================================= */
+  .cert-container {
+    margin: 3rem auto;
+  }
+}
+
+/* =========================================================================================================================== */
+/* ==================================================== PANTALLAS MUY GRANDES  ================================================== */
+/* =========================================================================================================================== */
+@media (min-width: 1492px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 4.5rem;
+  }
+
+  nav,
+  footer {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-position: center top;
+    background-size: 45px 45px;
+    background-repeat: repeat;
+    animation: moveBackgroundSmall 120s linear infinite;
+  }
+
+  .nav-content {
+    gap: 10rem;
+  }
+
+  .content-section {
+    width: 50vw;
+  }
+
+  /* ================================= PORTADA ================================= */
+  .portrait-image {
+    margin-top: 5rem;
+    width: 810px;
+    margin-left: -7rem;
+    z-index: 1;
+  }
+
+  /* Saludo */
+  .greeting h2 {
+    margin-top: 4rem;
+    margin-left: -3rem;
+  }
+
+  /* Título */
+  .main-title {
+    font-size: 3rem;
+    margin-right: 15rem;
+    white-space: nowrap;
+  }
+
+  /* Subtitulo */
+  .animated-subtitle {
+    font-size: 2.5rem;
+    margin-right: 8rem;
+  }
+
+  /* Descripción */
+  .description {
+    margin-right: 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Redes */
+  .moreInfo-wrapper {
+    gap: 15rem !important;
+    margin-right: 9rem;
+  }
+
+  /* Contacto */
+  .contact-container {
+    width: auto;
+    max-width: 100%;
+    padding-right: 5rem;
+  }
+
+  .contact-item {
+    width: 140%;
+    max-width: 100rem;
+    margin-left: -15rem;
+  }
+
+  /* CV */
+  .downloadCV-button {
+    margin-right: 9rem;
+    width: 20rem;
+  }
+
+  /* ================================= PROYECTOS ================================= */
+  /* ================================= HABILIDADES ================================= */
+  .carousel-wrapper {
+    padding: 0 0.5rem;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .skill-card {
+    width: 200px;
+    height: 25rem;
+    padding: 1rem;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .skill-card.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Flechas */
+  .arrow:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow-left {
+    margin-left: -1rem !important;
+  }
+
+  .arrow-right {
+    margin-right: -1rem !important;
+  }
+
+  /* ================================= EXPERIENCIA ================================= */
+  .cert-container {
+    margin: 3rem auto;
   }
 }
