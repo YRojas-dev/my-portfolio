@@ -59,7 +59,7 @@
     position: absolute;
     right: -1rem;
     z-index: 2000;
-    margin-right: 0;
+    margin-right: -7rem;
   }
 
   .lang-label {
@@ -294,7 +294,7 @@
     position: absolute;
     right: -1rem;
     z-index: 2000;
-    margin-right: 0;
+    margin-right: -7rem;
   }
 
   .lang-label {
@@ -552,9 +552,9 @@
 
   .lang-container {
     position: absolute;
-    right: -1rem;
+    right: -8rem;
     z-index: 2000;
-    margin-right: 0;
+    margin-right: -7rem;
   }
 
   .lang-label {
@@ -773,7 +773,7 @@
     position: absolute;
     right: 4.5rem;
     z-index: 2000;
-    margin-right: -3.5rem;
+    margin-right: -4.5rem;
   }
 
   .lang-label {
@@ -981,7 +981,7 @@
     position: absolute;
     right: 4.5rem;
     z-index: 2000;
-    margin-right: -3.5rem;
+    margin-right: -5rem;
   }
 
   .lang-label {
@@ -1189,9 +1189,9 @@
 
   .lang-container {
     position: absolute;
-    right: 4.5rem;
+    right: 7rem;
     z-index: 2000;
-    margin-right: -3.5rem;
+    margin-right: -5rem;
   }
 
   /* ================================= PORTADA ================================= */
@@ -1342,7 +1342,7 @@
     position: absolute;
     right: 4.5rem;
     z-index: 2000;
-    margin-right: -3.5rem;
+    margin-right: -5rem;
   }
 
   /* ================================= PORTADA ================================= */

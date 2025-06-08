@@ -173,7 +173,7 @@ nav a:hover {
 /* =========================================================================================================================== */
 .lang-container {
   position: absolute;
-  right: 3rem;
+  right: 7rem !important;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2000;
