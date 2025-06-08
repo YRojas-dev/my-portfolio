@@ -47,6 +47,53 @@
     width: 90vw;
   }
 
+  .lang-text .short {
+    display: inline;
+  }
+
+  .lang-text .full {
+    display: none;
+  }
+
+  .lang-container {
+    position: absolute;
+    right: -1rem;
+    z-index: 2000;
+    margin-right: 0;
+  }
+
+  .lang-label {
+    width: 9rem;
+  }
+
+  .text-wrapper {
+    width: 40px;
+  }
+
+  .lang-text {
+    min-width: 40px;
+  }
+
+  .lang-switch input[type="checkbox"]:checked + .lang-label .lang-icon {
+    transform: translate(49px, -50%);
+  }
+
+  html[data-lang="es"]
+    .lang-switch
+    input[type="checkbox"]:checked
+    + .lang-label
+    .text-wrapper {
+    transform: translateX(-3px) !important;
+  }
+
+  html[data-lang="en"]
+    .lang-switch
+    input[type="checkbox"]:checked
+    + .lang-label
+    .text-wrapper {
+    transform: translateX(-24rem) !important;
+  }
+
   /* ================================= PORTADA ================================= */
   .portrait-image {
     margin-top: 29rem;
@@ -56,27 +103,33 @@
   }
 
   /* Saludo */
+  .greeting {
+    margin-left: 4rem;
+    margin-top: 2rem;
+  }
+
   .greeting h2 {
     margin-top: 3rem;
+    margin-right: 0.5rem;
   }
 
   /* Título */
   .main-title {
     font-size: 3rem;
-    margin-right: 25rem;
+    margin-right: 40rem;
     white-space: nowrap;
   }
 
   /* Subtitulo */
   .animated-subtitle {
     font-size: 2.5rem;
-    margin-right: 30rem;
+    margin-right: 53rem;
   }
 
   /* Descripción */
   .description {
     justify-items: center;
-    margin-right: 29rem;
+    margin-right: 38rem;
     white-space: nowrap;
   }
 
@@ -229,6 +282,53 @@
     width: 90vw;
   }
 
+  .lang-text .short {
+    display: inline;
+  }
+
+  .lang-text .full {
+    display: none;
+  }
+
+  .lang-container {
+    position: absolute;
+    right: -1rem;
+    z-index: 2000;
+    margin-right: 0;
+  }
+
+  .lang-label {
+    width: 9rem;
+  }
+
+  .text-wrapper {
+    width: 40px;
+  }
+
+  .lang-text {
+    min-width: 40px;
+  }
+
+  .lang-switch input[type="checkbox"]:checked + .lang-label .lang-icon {
+    transform: translate(49px, -50%);
+  }
+
+  html[data-lang="es"]
+    .lang-switch
+    input[type="checkbox"]:checked
+    + .lang-label
+    .text-wrapper {
+    transform: translateX(-3px) !important;
+  }
+
+  html[data-lang="en"]
+    .lang-switch
+    input[type="checkbox"]:checked
+    + .lang-label
+    .text-wrapper {
+    transform: translateX(-24rem) !important;
+  }
+
   /* ================================= PORTADA ================================= */
   .portrait-image {
     margin-top: 22rem;
@@ -238,9 +338,30 @@
   }
 
   /* Saludo */
+  .greeting {
+    margin-left: 19rem;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+  }
+
   .greeting h2 {
-    margin-top: 3rem;
-    margin-left: -15rem;
+    margin-top: -2rem;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  #greetingFirst,
+  .green,
+  #greetingLast {
+    margin: -6rem;
+    padding: 0;
+  }
+
+  .green {
+    padding-bottom: 6rem;
+    padding-left: 3rem;
+    margin-right: 1rem !important;
   }
 
   /* Título */
@@ -258,7 +379,7 @@
 
   /* Descripción */
   .description {
-    margin-right: 29rem;
+    margin-right: 23rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -269,15 +390,15 @@
 
   /* Redes */
   .moreInfo-wrapper {
-    gap: 6rem !important;
-    margin-right: 20rem;
+    gap: 9rem !important;
+    margin-right: 17rem;
   }
 
   /* Contacto */
   .contact-container {
     width: auto;
     max-width: 100%;
-    padding-right: 5rem;
+    padding-right: 6rem;
   }
 
   .contact-item {
@@ -299,7 +420,7 @@
 
   /* CV */
   .downloadCV-button {
-    margin-right: 14rem;
+    margin-right: 15rem;
     width: 18rem;
   }
 
@@ -413,11 +534,59 @@
   }
 
   .nav-content {
-    gap: 5rem;
+    gap: 2rem;
+    margin-right: 11rem;
   }
 
   .content-section {
     width: 90vw;
+  }
+
+  .lang-text .short {
+    display: inline;
+  }
+
+  .lang-text .full {
+    display: none;
+  }
+
+  .lang-container {
+    position: absolute;
+    right: -1rem;
+    z-index: 2000;
+    margin-right: 0;
+  }
+
+  .lang-label {
+    width: 9rem;
+  }
+
+  .text-wrapper {
+    width: 40px;
+  }
+
+  .lang-text {
+    min-width: 40px;
+  }
+
+  .lang-switch input[type="checkbox"]:checked + .lang-label .lang-icon {
+    transform: translate(49px, -50%);
+  }
+
+  html[data-lang="es"]
+    .lang-switch
+    input[type="checkbox"]:checked
+    + .lang-label
+    .text-wrapper {
+    transform: translateX(-3px) !important;
+  }
+
+  html[data-lang="en"]
+    .lang-switch
+    input[type="checkbox"]:checked
+    + .lang-label
+    .text-wrapper {
+    transform: translateX(-24rem) !important;
   }
 
   /* ================================= PORTADA ================================= */
@@ -429,6 +598,10 @@
   }
 
   /* Saludo */
+  .greeting {
+    margin-left: 35rem;
+  }
+
   .greeting h2 {
     margin-top: 3rem;
     margin-left: -3rem;
@@ -449,7 +622,7 @@
 
   /* Descripción */
   .description {
-    margin-right: 10rem;
+    margin-right: 5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -460,15 +633,15 @@
 
   /* Redes */
   .moreInfo-wrapper {
-    gap: 8rem !important;
-    margin-right: 10rem;
+    gap: 12rem !important;
+    margin-left: 31rem;
   }
 
   /* Contacto */
   .contact-container {
     width: auto;
     max-width: 100%;
-    padding-right: 5rem;
+    padding-left: 4rem;
   }
 
   .contact-item {
@@ -490,7 +663,6 @@
 
   /* CV */
   .downloadCV-button {
-    margin-right: 3rem;
     width: 18rem;
   }
 
@@ -556,7 +728,7 @@
 /* =========================================================================================================================== */
 /* ========================================= TABLETS HORIZONTALES Y LAPTOPS PEQUEÑOS  ======================================== */
 /* =========================================================================================================================== */
-@media (min-width: 991px) and (max-width: 1200px) {
+@media (min-width: 991px) and (max-width: 1025px) {
   nav {
     position: fixed;
     top: 0;
@@ -589,11 +761,44 @@
   }
 
   .nav-content {
-    gap: 8rem;
+    gap: 3rem;
+    margin-right: 2rem;
   }
 
   .content-section {
     width: 80vw;
+  }
+
+  .lang-container {
+    position: absolute;
+    right: 4.5rem;
+    z-index: 2000;
+    margin-right: -3.5rem;
+  }
+
+  .lang-label {
+    width: 11rem;
+  }
+
+  .text-wrapper {
+    width: 90px;
+  }
+
+  .lang-text {
+    min-width: 10px;
+    margin-right: 7rem;
+  }
+
+  .lang-switch input[type="checkbox"]:checked + .lang-label .lang-icon {
+    transform: translate(69px, -50%);
+  }
+
+  html[data-lang="es"]
+    .lang-switch
+    input[type="checkbox"]:checked
+    + .lang-label
+    .text-wrapper {
+    transform: translateX(-14px) !important;
   }
 
   /* ================================= PORTADA ================================= */
@@ -605,6 +810,10 @@
   }
 
   /* Saludo */
+  .greeting {
+    margin-left: 32rem;
+  }
+
   .greeting h2 {
     margin-top: 3rem;
     margin-left: -3rem;
@@ -620,12 +829,12 @@
   /* Subtitulo */
   .animated-subtitle {
     font-size: 2.5rem;
-    margin-right: 8rem;
+    margin-right: 10rem;
   }
 
   /* Descripción */
   .description {
-    margin-right: 10rem;
+    margin-right: 13rem;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -636,15 +845,15 @@
 
   /* Redes */
   .moreInfo-wrapper {
-    gap: 13rem !important;
-    margin-right: 10rem;
+    gap: 17rem !important;
+    margin-right: 6rem;
   }
 
   /* Contacto */
   .contact-container {
     width: auto;
     max-width: 100%;
-    padding-right: 5rem;
+    padding-right: 2rem;
   }
 
   .contact-item {
@@ -666,7 +875,215 @@
 
   /* CV */
   .downloadCV-button {
-    margin-right: 8rem;
+    margin-right: 6rem;
+    width: 18rem;
+  }
+
+  /* ================================= PROYECTOS ================================= */
+  /* ================================= HABILIDADES ================================= */
+  .carousel-wrapper {
+    padding: 0 0.5rem;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .skill-card {
+    width: 200px;
+    height: 25rem;
+    padding: 1rem;
+    transform: translate(-50%, -50%) scale(0.75);
+  }
+
+  .skill-card.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Flechas */
+  .arrow:first-of-type {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow:last-of-type {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .arrow-left {
+    margin-left: 1rem !important;
+  }
+
+  .arrow-right {
+    margin-right: 1rem !important;
+  }
+
+  /* ================================= EXPERIENCIA ================================= */
+  .cert-container {
+    margin: 3rem auto;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 4.5rem;
+  }
+
+  nav,
+  footer {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-position: center top;
+    background-size: 45px 45px;
+    background-repeat: repeat;
+    animation: moveBackgroundSmall 120s linear infinite;
+  }
+
+  .nav-content {
+    gap: 3rem;
+    margin-right: 2rem;
+  }
+
+  .content-section {
+    width: 80vw;
+  }
+
+  .lang-container {
+    position: absolute;
+    right: 4.5rem;
+    z-index: 2000;
+    margin-right: -3.5rem;
+  }
+
+  .lang-label {
+    width: 11rem;
+  }
+
+  .text-wrapper {
+    width: 90px;
+  }
+
+  .lang-text {
+    min-width: 10px;
+    margin-right: 7rem;
+  }
+
+  .lang-switch input[type="checkbox"]:checked + .lang-label .lang-icon {
+    transform: translate(69px, -50%);
+  }
+
+  html[data-lang="es"]
+    .lang-switch
+    input[type="checkbox"]:checked
+    + .lang-label
+    .text-wrapper {
+    transform: translateX(-26px) !important;
+  }
+
+  /* ================================= PORTADA ================================= */
+  .portrait-image {
+    margin-top: 8rem;
+    width: 760px;
+    margin-left: -10rem;
+    z-index: 1;
+  }
+
+  /* Saludo */
+  .greeting {
+    margin-left: 32rem;
+  }
+
+  .greeting h2 {
+    margin-top: 3rem;
+    margin-left: -3rem;
+  }
+
+  /* Título */
+  .main-title {
+    font-size: 3rem;
+    margin-right: 15rem;
+    white-space: nowrap;
+  }
+
+  /* Subtitulo */
+  .animated-subtitle {
+    font-size: 2.5rem;
+    margin-right: 10rem;
+  }
+
+  /* Descripción */
+  .description {
+    margin-right: 13rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Redes */
+  .moreInfo-wrapper {
+    gap: 17rem !important;
+    margin-right: 6rem;
+  }
+
+  /* Contacto */
+  .contact-container {
+    width: auto;
+    max-width: 100%;
+    padding-right: 2rem;
+  }
+
+  .contact-item {
+    width: 140%;
+    max-width: 100rem;
+    margin-left: -15rem;
+  }
+
+  .text h3 {
+    white-space: nowrap;
+    font-size: 1.5rem !important;
+    padding-left: 3rem !important;
+    margin-right: -1rem;
+  }
+
+  .text-phone {
+    margin-left: 1rem;
+  }
+
+  /* CV */
+  .downloadCV-button {
+    margin-right: 6rem;
     width: 18rem;
   }
 
@@ -768,6 +1185,13 @@
 
   .content-section {
     width: 80vw;
+  }
+
+  .lang-container {
+    position: absolute;
+    right: 4.5rem;
+    z-index: 2000;
+    margin-right: -3.5rem;
   }
 
   /* ================================= PORTADA ================================= */
@@ -912,6 +1336,13 @@
 
   .content-section {
     width: 50vw;
+  }
+
+  .lang-container {
+    position: absolute;
+    right: 4.5rem;
+    z-index: 2000;
+    margin-right: -3.5rem;
   }
 
   /* ================================= PORTADA ================================= */
