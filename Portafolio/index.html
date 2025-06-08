@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>YRojas.Dev - Portafolio</title>
+        <title>YRojas.Dev - Portfolio</title>
         <link rel="preload" href="css/styles.css" as="style">
         <link href="css/layout.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
@@ -14,26 +14,60 @@
         <!-- ================================= NAVBAR ================================= -->
         <nav>
             <div class="nav-content">
-                <a href="#">Contacto</a>
-                <a href="#project-section">Proyectos</a>
-                <a href="#skills-section">Habilidades</a>
-                <a href="#experience-section">Experiencia</a>
-                <a href="#aboutMe-section">Sobre Mí</a>
+                <a id="contact-nav" href="#" id="contact-nav">Contacto</a>
+                <a id="project-nav" href="#project-section">Proyectos</a>
+                <a id="skills-nav" href="#skills-section">Habilidades</a>
+                <a id="exp-nav" href="#experience-section">Experiencia</a>
+                <a id="about-nav" href="#aboutMe-section">Sobre Mí</a>
             </div>
             <button id="menu-btn" class="hamburger-btn">&#9776;</button>
+
+            <!-- Lenguaje -->
+            <div class="lang-container">
+                <div class="lang-switch">
+                    <input type="checkbox" id="lang-toggle" />
+                    <label for="lang-toggle" class="lang-label">
+                        <div class="lang-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none" stroke="#57CCC7" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lang-icon-svg">
+                                <path
+                                    d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                <path d="M3.6 9h16.8" />
+                                <path d="M3.6 15h16.8" />
+                                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                                <path d="M12.5 3a17 17 0 0 1 0 18" />
+                            </svg>
+                        </div>
+                        <div class="text-wrapper">
+                            <span class="lang-text lang-en">
+                                <span class="full">English</span>
+                                <span class="short">En</span>
+                            </span>
+                            <span class="lang-text lang-es">
+                                <span class="full">Español</span>
+                                <span class="short">Es</span>
+                            </span>
+                        </div>
+                    </label>
+                </div>
+            </div>
         </nav>
 
+        <!-- Sidebar -->
         <aside id="sidebar" class="sidebar">
             <div class="container-menu-sidebar">
-                <h1 class="menu-sidebar">Menú</h1>
+                <h1 id="menu-sidebar" class="menu-sidebar">Menú</h1>
                 <button id="close-btn" class="close-btn">&times;</button>
             </div>
             <hr class="sidebar-divider">
-            <a href="#">Contacto</a>
-            <a href="#project-section">Proyectos</a>
-            <a href="#skills-section">Habilidades</a>
-            <a href="#experience-section">Experiencia</a>
-            <a href="#aboutMe-section">Sobre Mí</a>
+            <a id="contact-side" href="#">Contacto</a>
+            <a id="project-side" href="#project-section">Proyectos</a>
+            <a id="skills-side" href="#skills-section">Habilidades</a>
+            <a id="exp-side" href="#experience-section">Experiencia</a>
+            <a id="about-side" href="#aboutMe-section">Sobre Mí</a>
         </aside>
 
         <main>
@@ -41,12 +75,15 @@
                 <!-- ================================= PORTADA ================================= -->
                 <img class="portrait-image" src="img/portrait.png">
                 <div class="greeting">
-                    <h2>Hola<span class="green">,</span> soy</h2>
+                    <h2 id="grettingFirst">Hola</h2><h2
+                        class="green">,</h2><h2 id="grettingLast">soy</h2>
                 </div>
                 <h1 class="main-title">Yoselin Rojas Fuentes</h1>
-                <h2 class="animated-subtitle">Desarrolladora Web</h2>
+                <h2 id="subtitle" class="animated-subtitle">Desarrolladora
+                    Web</h2>
                 <div class="description">
-                    <h3>Diseño y desarrollo experiencias digitales</h3><h3> intuitivas y escalables.</h3>
+                    <h3 id="description-id">Diseño y desarrollo<br>
+                        experiencias digitales intuitivas y escalables.</h3>
                 </div>
                 <div class="moreInfo-wrapper">
 
@@ -154,7 +191,7 @@
 
                 <a href="/docs/cv.pdf" download="YoselinRojasFuentesCV.pdf"
                     class="downloadCV-button">
-                    <div class="downloadCV-content">
+                    <div id="download-cv" class="downloadCV-content">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             width="10" height="10" viewBox="0 0 24 24"
                             fill="none"
@@ -166,7 +203,7 @@
                             <path d="M12 17v-6" />
                             <path d="M9.5 14.5l2.5 2.5l2.5 -2.5" />
                         </svg>
-                        Descargar CV
+                        <span class="download-text">Descargar CV</span>
                     </div>
                 </a>
 
@@ -188,7 +225,7 @@
                         <path
                             d="M5 6m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
                     </svg>
-                    <h2>Proyectos</h2>
+                    <h2 id="projects">Proyectos</h2>
                 </div>
 
                 <h3>Desarrollo Web</h3>
@@ -254,7 +291,7 @@
                         <path d="M16 12l5 5l-4 4l-5 -5" />
                         <path d="M16 17l-1.5 1.5" />
                     </svg>
-                    <h2>Habilidades</h2>
+                    <h2 id="skills">Habilidades</h2>
                 </div>
 
                 <div class="carousel-wrapper">
@@ -275,7 +312,7 @@
                     <div class="carousel-track">
                         <!-- Tarjeta 1 -->
                         <div class="skill-card">
-                            <h3>Lenguajes</h3>
+                            <h3 id="lang-prog">Lenguajes</h3>
                             <div class="skill-grid">
                                 <div class="skill-item">
                                     <img src="img/icons/html.png" alt="HTML">
@@ -312,7 +349,7 @@
 
                         <!-- Tarjeta 2 -->
                         <div class="skill-card active">
-                            <h3>Herramientas</h3>
+                            <h3 id="tools">Herramientas</h3>
                             <div class="skill-grid">
                                 <div class="skill-item">
                                     <img src="img/icons/vscode.png"
@@ -392,36 +429,44 @@
                             d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
                         <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
                     </svg>
-                    <h2>Experiencia</h2>
+                    <h2 id="exp">Experiencia</h2>
                 </div>
 
                 <div class="experience-container">
                     <div class="experience-card">
                         <div class="experience-header">
-                            <h4 class="experience-title">Desarrolladora
+                            <h4 id="exp-sub1"
+                                class="experience-title">Desarrolladora
                                 Full-Stack
                                 pasante en ULTRAPARK</h4>
-                            <span class="experience-date">Marzo 2024 – Junio
+                            <span id="exp-span1" class="experience-date">Marzo
+                                2024 –
+                                Junio
                                 2024</span>
                         </div>
                         <div class="experience-divider"></div>
                         <ul class="experience-description">
-                            <li>Diseñé y desarrollé aplicaciones web full-stack
+                            <li id="exp11">Diseñé y desarrollé aplicaciones web
+                                full-stack
                                 utilizando Laravel, Vue.js y SQL, asegurando
                                 código eficiente y escalable.</li>
-                            <li>Gestioné el control de versiones con GitHub,
+                            <li id="exp12">Gestioné el control de versiones con
+                                GitHub,
                                 aplicando buenas prácticas de colaboración en
                                 entornos de desarrollo.</li>
-                            <li>Implementé prácticas de programación segura y
+                            <li id="exp13">Implementé prácticas de programación
+                                segura y
                                 optimización de bases de datos, mejorando la
                                 eficiencia y fiabilidad de las plataformas.</li>
-                            <li>Contribuí a la optimización de la experiencia de
+                            <li id="exp14">Contribuí a la optimización de la
+                                experiencia de
                                 usuario (UX/UI) en la gestión de mantenimientos
                                 programados, participando en el diseño e
                                 implementación de módulos clave. Esto resultó en
                                 una mejora del 15 % en la eficiencia y
                                 satisfacción del usuario.</li>
-                            <li>Compartí conocimientos y colaboré con otros
+                            <li id="exp15">Compartí conocimientos y colaboré con
+                                otros
                                 desarrolladores para mejorar continuamente los
                                 procesos y la calidad del software. Además,
                                 trabajé en entornos colaborativos y ágiles,
@@ -435,29 +480,37 @@
 
                     <div class="experience-card">
                         <div class="experience-header">
-                            <h4 class="experience-title">Desarrolladora
+                            <h4 id="exp-sub2"
+                                class="experience-title">Desarrolladora
                                 Full-Stack
                                 pasante en FUNDATEC</h4>
-                            <span class="experience-date">Febrero 2022 – Junio
+                            <span id="exp-span2" class="experience-date">Febrero
+                                2022 –
+                                Junio
                                 2023</span>
                         </div>
                         <div class="experience-divider"></div>
                         <ul class="experience-description">
-                            <li>Trabajé en estrecha colaboración con clientes
+                            <li id="exp21">Trabajé en estrecha colaboración con
+                                clientes
                                 para traducir sus necesidades a
                                 requisitos funcionales y técnicos detallados.
                                 Esto garantizó que los proyectos
                                 se desarrollaran alineados con sus expectativas
                                 y objetivos.</li>
-                            <li>Apliqué mis conocimientos en lenguajes frontend
+                            <li id="exp22">Apliqué mis conocimientos en
+                                lenguajes
+                                frontend
                                 y backend para construir
                                 soluciones web completas optimizando del proceso
                                 en un 65%. La metodología SCRUM facilitó la
                                 gestión eficiente de proyectos y la entrega
                                 oportuna.</li>
-                            <li>Apliqué heurísticas de Nielsen para evaluar la
+                            <li id="exp23">Apliqué heurísticas de Nielsen para
+                                evaluar la
                                 usabilidad de las interfaces.</li>
-                            <li>Identifiqué y corregí áreas problemáticas, lo
+                            <li id="exp24">Identifiqué y corregí áreas
+                                problemáticas, lo
                                 que resultó en un aumento del 15% en la
                                 satisfacción del cliente.</li>
                         </ul>
@@ -465,10 +518,13 @@
                 </div>
 
                 <div class="cert-container">
-                    <h3 class="cert-title">Título de Grado</h3>
+                    <h3 class="cert-title" id="degree-title">Título de
+                        Grado</h3>
                     <div class="cert-item">
                         <div class="cert-content">
-                            <p>Ingeniería en Sistemas de información - UNA</p>
+                            <p id="degree-p">Ingeniería en Sistemas de
+                                información -
+                                UNA</p>
                             <a class="cert-button" href="img/degree.png"
                                 target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -487,7 +543,7 @@
                 </div>
 
                 <div class="cert-container">
-                    <h3 class="cert-title">Certificaciones</h3>
+                    <h3 class="cert-title" id="cert-title">Certificaciones</h3>
                     <div class="cert-item">
                         <div class="cert-content">
                             <p>Scrum Fundamentals Certified - SCRUMstudy</p>
@@ -557,11 +613,11 @@
                         <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                         <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                     </svg>
-                    <h2>Sobre mí</h2>
+                    <h2 id="about">Sobre mí</h2>
                 </div>
 
                 <div class="about-card">
-                    <p>
+                    <p id="about-p1">
                         Soy una desarrolladora apasionada por la tecnología con
                         experiencia práctica adquirida a través de dos pasantías
                         formativas en <strong>FUNDATEC</strong> y
@@ -573,7 +629,7 @@
                         constante mientras creo soluciones útiles para mi
                         entorno.
                     </p>
-                    <p>
+                    <p id="about-p2">
                         Me caracterizo por ser organizada,
                         detallista y perfeccionista, cualidades que aplico en
                         cada proyecto para asegurar calidad y eficiencia, sin
@@ -588,7 +644,7 @@
                         visión estética y centrada en la experiencia del
                         usuario.
                     </p>
-                    <p>
+                    <p id="about-p3">
                         Valoro la conexión con la naturaleza como forma de
                         equilibrar la creatividad y el bienestar personal, lo
                         cual influye positivamente en mi enfoque profesional.
@@ -636,9 +692,8 @@
                 </div>
             </div>
 
-            <p class="copyright">© 2025 Yoselin Rojas Fuentes. Todos los
-                derechos
-                reservados.</p>
+            <p class="copyright" id="copyright">© 2025 Yoselin Rojas Fuentes.
+                Todos los derechos reservados.</p>
         </footer>
 
     </html>

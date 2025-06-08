@@ -75,12 +75,17 @@
   pointer-events: none;
 }
 
-/* Saludo */
+.greeting {
+  margin-left: 28rem; 
+  margin-top: 2rem;
+}
+
 .greeting h2 {
+  display: inline; 
   font-size: 3rem;
-  font-weight: 400;
-  color: var(--secondary-text-color);
   font-weight: bold;
+  color: var(--secondary-text-color);
+  margin-right: 3.5rem; 
 }
 
 .greeting .green {
@@ -94,7 +99,7 @@
   font-weight: bold;
   margin: 0;
   margin-top: 1rem;
-  margin-left: 27rem;
+  margin-left: 40rem;
   color: var(--secondary-text-color);
 }
 
@@ -103,7 +108,7 @@
   font-size: 2.8rem;
   color: var(--primary-text-color);
   margin-top: 0.5rem;
-  margin-left: 40rem;
+  margin-left: 55rem;
   font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
@@ -140,7 +145,7 @@
 .description {
   color: var(--secondary-text-color);
   font-weight: bold;
-  margin-left: 32rem;
+  margin-left: 38rem;
 }
 
 .description h3 {
