@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const langToggle = document.getElementById('lang-toggle');
   let current = 0;
 
+  /* ==================================================================================================== */
+  /* ============================================= CARRUSEL ============================================= */
+  /* ==================================================================================================== */
   function updateCarousel() {
     const radius = 260;
 
@@ -65,6 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
   nextBtn?.addEventListener('click', nextSlide);
   prevBtn?.addEventListener('click', prevSlide);
 
+  /* ==================================================================================================== */
+  /* =========================================== COPY BUTTON ============================================ */
+  /* ==================================================================================================== */
   copyBtnEmail?.addEventListener('click', () => {
     navigator.clipboard.writeText('yrojas.dev@gmail.com')
       .then(showToast)
@@ -77,7 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(err => console.error('Error al copiar: ', err));
   });
 
-  // Menú lateral
+  /* ==================================================================================================== */
+  /* ============================================= SIDEBAR ============================================== */
+  /* ==================================================================================================== */
   menuBtn?.addEventListener('click', () => {
     sidebar?.classList.add('show');
   });
@@ -92,7 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Diccionario de traducciones
+  /* ==================================================================================================== */
+  /* =========================================== TRADUCCION ============================================= */
+  /* ==================================================================================================== */
   const translations = {
     es: {
       'contact-nav': 'Contacto',
@@ -195,38 +205,46 @@ document.addEventListener('DOMContentLoaded', () => {
   function setLanguage(lang) {
     currentLang = lang;
     const texts = translations[lang];
+    
+    // Actualizar textos generales
     for (const key in texts) {
+      if (key === 'download-cv') continue; // Omitimos texto del CV porque está en el botón fijo
+  
       const element = document.getElementById(key);
-
-      if (key === 'download-cv') {
-        const span = element?.querySelector('.download-text');
+      if (!element) continue;
+  
+      if (key === 'gretting') {
+        const span = element.querySelector('.gretting-text');
         if (span) span.textContent = texts[key];
-      } else if (element) {
+      } else {
         element.innerHTML = texts[key];
       }
     }
-
-    for (const key in texts) {
-      const element = document.getElementById(key);
-
-      if (key === 'download-cv') {
-        const span = element?.querySelector('.download-text');
-        if (span) span.textContent = texts[key];
-      } else if (key === 'gretting') {
-        const span = element?.querySelector('.gretting-text');
-        if (span) span.textContent = texts[key];
-      } else if (element) {
-        element.innerHTML = texts[key];
-      }
+  
+    // Mostrar/ocultar botones según idioma
+    const btnEs = document.getElementById('cv-es');
+    const btnEn = document.getElementById('cv-en');
+  
+    if (lang === 'es') {
+      if (btnEs) btnEs.style.display = 'inline-flex';  // o 'block' o como quieras que se muestre
+      if (btnEn) btnEn.style.display = 'none';
+    } else if (lang === 'en') {
+      if (btnEs) btnEs.style.display = 'none';
+      if (btnEn) btnEn.style.display = 'inline-flex';
     }
   }
+  
 
   const langCheckbox = document.getElementById("lang-toggle");
   langCheckbox?.addEventListener("change", () => {
     const newLang = langCheckbox.checked ? 'en' : 'es';
     setLanguage(newLang);
+    updateButtonCV(lang);
   });
 
+  /* ==================================================================================================== */
+  /* =================================== ANIMACIÓN SUBTITULO ============================================ */
+  /* ==================================================================================================== */
   function updateCursorWidth() {
     if (langToggle.checked) {
       // Inglés: 13 caracteres
@@ -259,6 +277,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   langToggle.addEventListener('change', updateCursorWidth);
 
+  /* ==================================================================================================== */
+  /* ========================================= ANIMACION IDIOMA ========================================= */
+  /* ==================================================================================================== */
   function ajustarPosicionTextoIdioma() {
     const textWrapper = document.querySelector('.text-wrapper');
     const langToggle = document.getElementById('lang-toggle');
@@ -279,6 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('DOMContentLoaded', ajustarPosicionTextoIdioma);
   window.addEventListener('resize', ajustarPosicionTextoIdioma);
+
   document.getElementById('lang-toggle').addEventListener('change', () => {
     setTimeout(ajustarPosicionTextoIdioma, 10);
   });
@@ -288,8 +310,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-lang', lang);
   });
 
+  /* ==================================================================================================== */
+  /* ================================== BOTON DE DESCARGA CV======================================== */
+  /* ==================================================================================================== */
+  function updateButtonCV(lang) {
+    const btnEs = document.getElementById('cv-download-es');
+    const btnEn = document.getElementById('cv-download-en');
+  
+    if (lang === 'es') {
+      btnEs.style.display = 'inline-block';
+      btnEn.style.display = 'none';
+    } else {
+      btnEs.style.display = 'none';
+      btnEn.style.display = 'inline-block';
+    }
+  }
 
-
+  /* ============================= LLAMADO DE FUNCIONES ============================= */
   updateCursorWidth();
   setLanguage(currentLang);
   updateCarousel();
